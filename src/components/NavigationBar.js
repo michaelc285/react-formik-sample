@@ -1,5 +1,5 @@
 import React from 'react';
-import { ROOT, BASIC_FORM } from "../path";
+import { ROOT, BASIC_FORM, FORMIK_FORM } from "../path";
 import { Link, useLocation } from "react-router-dom";
 
 export default function NavigationBarComponent() {
@@ -17,7 +17,10 @@ export default function NavigationBarComponent() {
                         <Link className={`nav-link ${ROOT === pathname && "active"}`} to={ROOT}>Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={`nav-link ${BASIC_FORM === pathname && "active"}`} to={BASIC_FORM}>BasicForm</Link>
+                        <Link className={`nav-link ${BASIC_FORM === pathname && "active"}`} to={BASIC_FORM}>Basic</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className={`nav-link ${FORMIK_FORM === pathname && "active"}`} to={FORMIK_FORM}>Formik</Link>
                     </li>
                 </ul>
             </div>
