@@ -2,7 +2,7 @@
 import { Route, Switch } from "react-router-dom";
 import { ROOT, BASIC_FORM, FORMIK_FORM } from "./path";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "./App.css";
 // Components
 import NavigationBar from "./components/NavigationBar";
 import HomePage from "./components/HomePage";
