@@ -1,7 +1,10 @@
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage, FieldArray } from 'formik';
+import DatePickerField from "./DatePickerField";
+
 
 export default function FormikForm() {
+
     return (
         <div className="px-3">
             <Formik
@@ -14,7 +17,8 @@ export default function FormikForm() {
                         email: "",
                         gender: "",
                     }],
-                    selection: []
+                    selection: [],
+                    date: new Date()
                 }}
                 onSubmit={async (values) => {
                     await new Promise((r) => setTimeout(r, 500));
@@ -132,6 +136,11 @@ export default function FormikForm() {
                             <option value="orange">Orange</option>
                             <option value="melon">Melon</option>
                         </Field>
+
+
+                        <hr />
+
+                        <DatePickerField className="form-control" name="date" showTimeSelect dateFormat="Pp" />
 
                         <hr />
                         <button type="submit" className="btn btn-primary">Submit</button>
