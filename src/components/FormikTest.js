@@ -52,12 +52,12 @@ export default function FormikForm() {
                                 <Field className="form-check-input" id="check-one" type="checkbox" name="checked" value="One" />
                             </div>
                             <div className="form-check" aria-labelledby="checkbox-group">
-                                <label className="form-check-label" htmlFor="check-one">Two</label>
-                                <Field className="form-check-input" type="checkbox" name="checked" value="Two" />
+                                <label className="form-check-label" htmlFor="check-two">Two</label>
+                                <Field className="form-check-input" id="check-two" type="checkbox" name="checked" value="Two" />
                             </div>
                             <div className="form-check" aria-labelledby="checkbox-group">
-                                <label className="form-check-label" htmlFor="check-one">Three</label>
-                                <Field className="form-check-input" type="checkbox" name="checked" value="Three" />
+                                <label className="form-check-label" htmlFor="check-three">Three</label>
+                                <Field className="form-check-input" id="check-three" type="checkbox" name="checked" value="Three" />
                             </div>
                         </div>
                         <hr />
