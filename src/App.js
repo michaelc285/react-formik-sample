@@ -7,7 +7,7 @@ import "./App.css";
 import NavigationBar from "./components/NavigationBar";
 import HomePage from "./components/HomePage";
 import BasicForm from "./components/BasicForm";
-import FormikForm from "./components/FormikForm";
+import FormikTest from "./components/FormikTest";
 
 function App() {
   return (
@@ -16,7 +16,8 @@ function App() {
       <Switch>
         <Route path={ROOT} exact component={HomePage} />
         <Route path={BASIC_FORM} exact component={BasicForm} />
-        <Route path={FORMIK_FORM} exact component={FormikForm} />
+        <Route path={FORMIK_FORM} exact component={FormikTest} />
+        <Route path={"*"} component={HomePage} />
       </Switch>
     </>
   );

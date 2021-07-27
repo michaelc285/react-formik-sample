@@ -14,9 +14,6 @@ export default function NavigationBarComponent() {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link className={`nav-link ${ROOT === pathname && "active"}`} to={ROOT}>Home</Link>
-                    </li>
-                    <li className="nav-item">
                         <Link className={`nav-link ${BASIC_FORM === pathname && "active"}`} to={BASIC_FORM}>Basic</Link>
                     </li>
                     <li className="nav-item">
