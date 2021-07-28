@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 export default function HomePageComponent() {
+    
     return (
         <div className="p-3" style={{ fontSize: 18 }}>
             <section className="mb-2">

@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ROOT, BASIC_FORM, FORMIK_FORM } from "../path";
 import { Link, useLocation } from "react-router-dom";
+import { useMeasure } from '../hooks/useMeasure';
 
 export default function NavigationBarComponent() {
-    const location = useLocation();
-    const { pathname } = location;
+    const { pathname } = useLocation();
+    const navRef = useRef();
+    useMeasure(navRef);
+    
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light" ref={navRef}>
             <Link className={`navbar-brand px-2`} to={ROOT}>Formik</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

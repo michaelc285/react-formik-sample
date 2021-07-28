@@ -1,4 +1,6 @@
-
+import { useReducer, useMemo } from "react";
+import { LayoutContext } from "./contexts/layoutContext";
+import { measureReducer, initialMeasureState } from "./reducers/layoutReducer";
 import { Route, Switch } from "react-router-dom";
 import { ROOT, BASIC_FORM, FORMIK_FORM } from "./path";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,8 +12,11 @@ import BasicForm from "./components/BasicForm";
 import FormikTest from "./components/FormikTest";
 
 function App() {
+  const [measure, measureDispatch] = useReducer(measureReducer, initialMeasureState);
+  const layoutValue = useMemo(() => ({ measure, measureDispatch }), [measure, measureDispatch]);
+  
   return (
-    <>
+    <LayoutContext.Provider value={layoutValue}>
       <NavigationBar />
       <Switch>
         <Route path={ROOT} exact component={HomePage} />
@@ -19,7 +24,7 @@ function App() {
         <Route path={FORMIK_FORM} exact component={FormikTest} />
         <Route path={"*"} component={HomePage} />
       </Switch>
-    </>
+    </LayoutContext.Provider>
   );
 }
 
