@@ -6,8 +6,8 @@ import { useMeasure } from '../hooks/useMeasure';
 export default function NavigationBarComponent() {
     const { pathname } = useLocation();
     const navRef = useRef();
-    useMeasure(navRef);
-    
+    useMeasure(navRef, "NAV_REF_ADD");
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light" ref={navRef}>
             <Link className={`navbar-brand px-2`} to={ROOT}>Formik</Link>

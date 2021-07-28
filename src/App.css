@@ -1,6 +1,7 @@
+
 .flex-container {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .flex-container>* {
@@ -10,4 +11,9 @@
 .box {
   border: 2px solid gray;
   background-color: white;
+}
+
+.footer {
+  margin-top: auto;
+  height: 4em;
 }
