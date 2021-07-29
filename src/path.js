@@ -1,3 +1,3 @@
-export const ROOT = "/";
-export const BASIC_FORM = "/basic-form";
-export const FORMIK_FORM = "/formik-test";
+export const ROOT = "/react-formik-sample";
+export const BASIC_FORM = `${ROOT}/basic-form`;
+export const FORMIK_FORM = `${ROOT}/formik-test`;
