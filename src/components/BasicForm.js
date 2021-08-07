@@ -1,10 +1,11 @@
 import React from 'react'
 import { Formik } from 'formik';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+//import AutosizeTextarea from "./AutosizeTextarea";
 export default function BasicFormComponents() {
     return (
         <div className="p-3">
+            {/* <AutosizeTextarea className="form-control" onChange={(event) => console.log(event)} /> */}
             <Formik
                 initialValues={{ email: '', password: '' }}
                 validate={values => {
